@@ -1,0 +1,132 @@
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding: 20px;
+        margin: 0;
+        background-size: contain;
+        line-height: 1.5;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    .row h1 {
+        text-align: center;
+        font-weight: bolder;
+        color: #4682b4;
+        font-size: 40px;
+    }
+    
+    #signout_button {
+        border-radius: 45%;
+        font-size: large;
+        border-color: #4682b4;
+        color: #4682b4;
+    }
+    
+    #authorize_button {
+        border-radius: 45%;
+        font-size: large;
+        border-color: #4682b4;
+        color: #4682b4;
+    }
+    
+    .main {
+        background-color: white;
+        padding: 20px;
+        height: auto;
+        transition: margin-left .5s;
+        color: #4682b4;
+        text-decoration: none;
+        cursor: pointer;
+        padding-block: 20px;
+        text-align: left;
+        font-size: medium;
+    }
+    
+    .col12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .navbar {
+        background-color: #4682b4;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        overflow-x: hidden;
+        z-index: 1;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .navbar a:hover {
+        background-color: white;
+        color: #4682b4;
+    }
+    
+    .navbar a {
+        padding: 8px 8px 8px;
+        text-decoration: none;
+        font-size: 25px;
+        display: flex;
+        font-size: medium;
+        color: white;
+    }
+    
+    .footer {
+        padding: 20px;
+        text-align: left;
+        background-color: #4682b4;
+        color: white;
+        height: auto;
+        margin-top: 20px;
+        box-sizing: border-box;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    .footer :hover {
+        background-color: white;
+        color: #4682b4;
+    }
+    
+    .footer img {
+        padding-inline-end: 20px;
+        position: relative;
+        box-sizing: content-box;
+    }
+    
+    #submit-btn {
+        border: 1px solid #4682b4;
+        border-radius: 15%;
+        color: #4682b4;
+    }
+    /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+    
+    @media screen and (max-width: 700px) {
+        .row {
+            flex-direction: column;
+        }
+    }
+    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    
+    @media screen and (max-height: 450px) {
+        .sidebar {
+            padding-top: 15px;
+        }
+    }
+    
+    @print {
+        @page :footer {
+            display: none
+        }
+        @page :header {
+            display: none
+        }
+    }
