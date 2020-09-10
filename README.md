@@ -30,8 +30,8 @@ Utilizzando il tool, potrà  effettuare queste operazione su un'unica piattaform
  Eseguire "python -m SimpleHTTPServer 8000" (Python 2.x) oppure "python -m http.server 8000" (Python 3.x).
 - Il tool è stato testato utilizzando Google Chrome.
 
-#Author:
-   Sabrina Beninati
-   Email: sabry.beninati@gmail.com
-    LinkedIn: https://www.linkedin.com/in/sabrina-beninati-26108618b
+# Author:
+   - Sabrina Beninati
+   - Email: sabry.beninati@gmail.com
+   - LinkedIn: https://www.linkedin.com/in/sabrina-beninati-26108618b
 
