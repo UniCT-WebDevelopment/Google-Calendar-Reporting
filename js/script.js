@@ -1,6 +1,6 @@
 // Client ID and API key from the Developer Console
-var CLIENT_ID = '<YOUR_CLIENT_ID>';
-var API_KEY = '<YOUR_API_KEY>';
+var CLIENT_ID = '712209434861-i22sm928ce3k4a87serr0ck35m4e1kq9.apps.googleusercontent.com';
+var API_KEY = 'AIzaSyCJ37Pnc_X9-t5VmW4v8mNlnN1SldPSAeg';
 
 // Array of API discovery doc URLs for APIs used by the quickstart
 var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
@@ -89,18 +89,27 @@ function getProjects() {
 
                 $("#projects").append(
                     $("<div>").addClass("row").append(
-                        $("<div>")
-                        .addClass("col-12")
+                        $("<span>")
+                        .addClass("col-8")
                         .text(resp.items[i].summary)
                         .attr("calendar-id", resp.items[i].id).on("click", function() {
                             getCalendarsList($(this).attr("calendar-id"))
 
                         })
-                    )
+                    ).append($('<button class="deleteBotton"> Elimina </button>').
+                        attr("calendar-id", resp.items[i].id).on("click", function() {
+                            var r = confirm("Conferma eliminazione");
+                            if (r == true) {
+                                _deleteProject($(this).attr("calendar-id"));
+                            } else {
+                                $("<div").append("cancel")
+                            }
+                    }))
                 );
             }
         });
     });
+    console.log("hello")
     show_projects();
 }
 
@@ -153,7 +162,7 @@ function formatDate(data) {
     return day + "/" + month + "/" + year;
 };
 
-
+/*
 
 //delete an existing project
 
@@ -189,7 +198,7 @@ function deleteProject() {
     });
     show_projects();
 }
-
+*/
 
 function _deleteProject(id) {
     return gapi.client.calendar.calendars.delete({
@@ -302,7 +311,7 @@ function getId() {
 function show_form(calendarId) {
     show_new_event();
     document.getElementById("id_progetto").value = calendarId;
-    ''
+    
 };
 
 
